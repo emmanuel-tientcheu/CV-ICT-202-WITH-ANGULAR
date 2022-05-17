@@ -1,0 +1,72 @@
+{
+    "all":{
+        
+            "nom": "nom d'utilisateur",
+            "image": "image en base64",
+          
+            "experience": [
+              {
+                "titre": "ex: Caisier a uba",
+                "periode": "Mar. 2021-present",
+                "detail": "Charge de recevoir les client et collecter les recttes ..."
+              },
+              {
+                "titre": "ex: Prof de maths",
+                "periode": "Fev. 2021-present",
+                "detail": "repetiteur a domicile blabla bala ..."
+              },
+              {
+                "titre": "...",
+                "periode": "...",
+                "detail": " ..."
+              }
+            ],
+          
+            "formation": [
+              {
+                "titre": "LICENCE 2 <strong>ICT4D</strong>",
+                "ecole": "universite de yaounde 1",
+                "periode": "2020-present"
+              },
+              {
+                "titre": "LICENCE 1 <strong>ICT4D</strong>",
+                "ecole": "universite de yaounde 1",
+                "periode": "2019-2020"
+              }
+            ],
+          
+            "competances": [
+              {
+                "nom": "HTML",
+                "evolution": "80%"
+              },
+              {
+                "nom": "CSS",
+                "evolution": "70%"
+              },
+              {
+                "nom": "autre nom",
+                "evolution": "autre pourcentage"
+              }
+            ],
+          
+            "biographie": [
+              {
+                "poste": "PDG d'UBA",
+                "profil": "Passionné par le web et la Cyber sécurité, actuellement en formation et participes aux CTFS et fait des challenges de Cyber sécurité, sur les plateformes dédiées comme root-me."
+              }
+            ],
+            "icons": [
+              {
+                "nom": "exple@gmail.com",
+                "url": "logo base64 de gmail"
+              },
+              {
+                "nom": "autre compte",
+                "url": "..."
+              }
+            ]
+          }
+          
+    
+}
