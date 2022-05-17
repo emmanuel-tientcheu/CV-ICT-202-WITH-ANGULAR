@@ -1,0 +1,11 @@
+*{
+   font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+   text-align: center;
+}
+
+.principale{
+  /*  position:absolute;
+    top:10%;
+    left:50%;
+    transform:translate(-50px,-50px);*/
+}
