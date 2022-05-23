@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.mainDashBord{
+ width: 20vw;
+ margin: 0px 0px 0px 10px;
+}
+a{
+    font-size:30px;
+    margin: 3%;
+}
+.mainDah1{
+    background-color:#0D0D0D;
+    height:45vh;
+}
+
+.mainDah2{
+    background-color:#2F2F2F;
+    height:54vh;
+}
+button{
+    width:100%;
+    border:none;
+    height:5vh;
+    color:white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width:1000px){
+    .mainDashBord{
+        width: 50vw;
+    }
+    .mainDah1{
+        background-color:#0D0D0D;
+        height:50vh;
+    }
+}
+
+/*
+<button class="" appBtnChangeColor>ABOUT</button>
+            <button class="" appBtnChangeColor>LOISIR</button>
+            <button class="" appBtnChangeColor>DIPLOME</button>
+            <button class="" appBtnChangeColor>COMPETANCE</button>
+            <button class="" appBtnChangeColor>FORMATION</button>
+
+           
+*/

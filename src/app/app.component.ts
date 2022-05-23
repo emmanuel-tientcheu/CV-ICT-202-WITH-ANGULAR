@@ -1,35 +1,21 @@
-import { Component,OnInit} from '@angular/core';
-import {JsonService} from './services/json.service';
-
-import{Competance} from './interfaceCompetence';
-import { Experience } from './interfaceExperience';
-import {Formation} from './interfaceFormation';
-import {Biographie} from './interfaceBiographie';
-
-import {Structure} from './interfaceStructure';
+import { Component,OnInit } from '@angular/core';
+import { DbServiceInformation } from './services/db.service';
+import { db } from './dbStructure';
 
 @Component({
   selector: 'app-root',
-  templateUrl:'app.component.html',
-  styleUrls: ['./app.component.css'],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'ng-cv202WithAngular';
-  structure : Structure;
-  nom : string ;
-  
+  title = 'definitiveCv202';
 
-  constructor(private data:JsonService){
-
+  constructor(){}
+  ngOnInit(): void {
+   
   }
-
-  async ngOnInit(){
-   this.data.get().subscribe(data => {
-     console.log(data);
-     this.nom = data.nom;
-    });
-   console.log("bonjour")
-    
-  }
-
 }
+
+/*   <app-hearder-app></app-hearder-app>
+     <app-das-bord></app-das-bord>
+*/

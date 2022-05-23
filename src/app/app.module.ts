@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EnterNameDirective } from './enter-name.directive';
+import {HttpClientModule} from '@angular/common/http';
+import { DasBordComponent } from './das-bord/das-bord.component';
+import { BtnChangeColorDirective } from './btn-change-color.directive';
+import { HearderAppComponent } from './hearder-app/hearder-app.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EnterNameDirective,
+    DasBordComponent,
+    BtnChangeColorDirective,
+    HearderAppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
     HttpClientModule
   ],
   providers: [],

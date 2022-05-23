@@ -1,0 +1,82 @@
+{
+    "information":[{
+        "nom": "nom d'utilisateur",
+        "prenom" :"prenom utilisateur",
+        "image": "mainDash"
+    }],
+  
+    "experience": [
+      {
+        "id":1,
+        "titre": "ex: Caisier a uba",
+        "periode": "Mar. 2021-present",
+        "detail": "Charge de recevoir les client et collecter les recttes ..."
+      },
+      {
+        "id":2,
+        "titre": "ex: Prof de maths",
+        "periode": "Fev. 2021-present",
+        "detail": "repetiteur a domicile blabla bala ..."
+      },
+      {
+        "id":3,
+        "titre": "...",
+        "periode": "...",
+        "detail": " ..."
+      }
+    ],
+  
+    "formation": [
+      {
+        "id":1,
+        "titre": "LICENCE 2 <strong>ICT4D</strong>",
+        "ecole": "universite de yaounde 1",
+        "periode": "2020-present"
+      },
+      {
+        "id":2,
+        "titre": "LICENCE 1 <strong>ICT4D</strong>",
+        "ecole": "universite de yaounde 1",
+        "periode": "2019-2020"
+      }
+    ],
+  
+    "competance": [
+      {
+        "id":1,
+        "nom": "HTML",
+        "evolution": "80%"
+      },
+      {
+        "id":2,
+        "nom": "CSS",
+        "evolution": "70%"
+      },
+      {
+        "id":3,
+        "nom": "autre nom",
+        "evolution": "autre pourcentage"
+      }
+    ],
+  
+    "biographie": [
+      {
+        "id":1,
+        "poste": "PDG d'UBA",
+        "profil": "Passionné par le web et la Cyber sécurité, actuellement en formation et participes aux CTFS et fait des challenges de Cyber sécurité, sur les plateformes dédiées comme root-me."
+      }
+    ],
+    "icon": [
+      {
+        "id":1,
+        "nom": "exple@gmail.com",
+        "url": "logo base64 de gmail"
+      },
+      {
+        "id":2,
+        "nom": "autre compte",
+        "url": "..."
+      }
+    ]
+  }
+  

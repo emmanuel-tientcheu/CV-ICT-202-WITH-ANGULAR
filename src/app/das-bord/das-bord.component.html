@@ -1,0 +1,24 @@
+<div class="container mainDashBord ">
+  <div class="container mainDah1">
+    <div class="pictureUser rounded-circle text-center my-2">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png" class=".img" alt="une image" height="200px" width="200px">  
+    </div>
+    <div class="userName text-center my-2">
+        <h4 [ngStyle]="{'color':'white'}">{{nom | uppercase}}</h4>
+    </div>
+    <div class="items my-2 text-center">
+        <a href="#"><i class="fab fa-linkedin" [ngStyle]="{'color':'red'}" [ngStyle]="{'color':'white'}"></i></a>
+        <a href="#"><i class="fab fa-stack-overflow" [ngStyle]="{'color':'red'}" [ngStyle]="{'color':'white'}"></i></a>
+        <a href="#"><i class="fab fa-github" [ngStyle]="{'color':'red'}" [ngStyle]="{'color':'white'}"></i></a>
+    </div>
+  </div>
+  <div class="container mainDah2">
+        <div class="allFonction">
+            <button class="" appBtnChangeColor>ABOUT</button>
+            <button class="" appBtnChangeColor>LOISIR</button>
+            <button class="" appBtnChangeColor>DIPLOME</button>
+            <button class="" appBtnChangeColor>COMPETANCE</button>
+            <button class="" appBtnChangeColor>FORMATION</button>
+        </div>
+  </div>
+</div>
