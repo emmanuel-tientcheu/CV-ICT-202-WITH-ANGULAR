@@ -8,7 +8,9 @@ import { EnterNameDirective } from './enter-name.directive';
 import {HttpClientModule} from '@angular/common/http';
 import { DasBordComponent } from './das-bord/das-bord.component';
 import { BtnChangeColorDirective } from './btn-change-color.directive';
-import { HearderAppComponent } from './hearder-app/hearder-app.component'
+import { HearderAppComponent } from './hearder-app/hearder-app.component';
+//import { AboutMe } from './about-me.component/about-me.component.component';
+import { AboutMeComponent } from './about-me/about-me.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HearderAppComponent } from './hearder-app/hearder-app.component'
     EnterNameDirective,
     DasBordComponent,
     BtnChangeColorDirective,
-    HearderAppComponent
+    HearderAppComponent,
+    //AboutMe.ComponentComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
