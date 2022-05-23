@@ -1,3 +1,27 @@
-.header{
-   background-color:orange;
+
+.navbar{
+ border: 2px solid;  
+ border-radius: 1%;
+ background-color: #4A63E7;
+color: azure;
+border-radius: 20px;
+}
+.navbar-brand{
+   display: flex;
+}
+
+.nav-item{
+   margin-left: 20px;
+}
+
+h3{
+   font-size: 24px;
+   font-weight: 700;
+   font-family: "Open Sans",sans-serif;
+}
+
+img{
+   border: 1px solid;
+   border-radius: 50%;
+   height: 90%;
 }
