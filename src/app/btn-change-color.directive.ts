@@ -9,14 +9,20 @@ export class BtnChangeColorDirective {
     
   this.setBackGroung('#2F2F2F')
   }
-  @HostListener('mouseenter')onMouseEnter(){
-    this.setBackGroung('orange');
+  @Input('appBtnChangeColor')color:string;
+
+  @HostListener('window:load')onPageLoad(){
+    console.log(this.color);
+    this.setBackGroung(this.color);
+
   }
-  @HostListener('mouseleave') onMouseLeave(){
-    this.setBackGroung('#2F2F2F');
-   }
+  @HostListener('click')onclick(){
+    this.setBackGroung(this.color);
+  }
+  
 
   setBackGroung(color:string){
     this.el.nativeElement.style.backgroundColor = color;
+    
   }
 }

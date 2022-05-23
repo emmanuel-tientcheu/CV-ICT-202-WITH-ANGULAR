@@ -15,6 +15,7 @@ export class DasBordComponent implements OnInit {
   prenom : string ;
   image : string ;
   fatimes = faTimes;
+  color : string ="#4A63E7";
    
   constructor(private dbServiceinformation:DbServiceInformation) { }
   

@@ -1,29 +1,12 @@
-.header{
-   width: 50%;
-}
-.navbar{
- border: 2px solid;  
- border-radius: 1%;
- background-color: #4A63E7;
-color: azure;
-border-radius: 20px;
-}
-.navbar-brand{
-   display: flex;
+.headers{
+   width:15vw;
+   height: 6vh;
+   border-radius:15px;
 }
 
-.nav-item{
-   margin-left: 20px;
-}
 
-h3{
-   font-size: 24px;
-   font-weight: 700;
-   font-family: "Open Sans",sans-serif;
-}
-
-img{
-   border: 1px solid;
-   border-radius: 50%;
-   height: 50px;
+@media screen and (max-width:1000px){
+   .headers{
+       height:8vh;
+   }
 }
