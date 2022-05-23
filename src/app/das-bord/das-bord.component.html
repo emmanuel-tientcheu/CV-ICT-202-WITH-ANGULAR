@@ -1,24 +1,50 @@
-<div class="container mainDashBord ">
-  <div class="container mainDah1">
-    <div class="pictureUser rounded-circle text-center my-2">
-        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png" class=".img" alt="une image" height="200px" width="200px">  
+<div class=" container-fluid mainDashBord mx-3 mt-4 text-center " appBtnChangeColor={{color}}>
+  <div class="image text-center my-3">
+    <div class="row">
+      <div class="col">
+        <img src="../../assets/images/galaxy-g1aeacd1b6_1280.jpg" alt="" class=" rounded-circle my-3 imgProfil" height="90px" width="90px">
+      </div>
+      <div class="col"></div>
     </div>
-    <div class="userName text-center my-2">
-        <h4 [ngStyle]="{'color':'white'}">{{nom | uppercase}}</h4>
+
+    <div class="row userInformation my-3">
+      <div class="col mx-2"><h5>{{nom | uppercase}}</h5></div>
+      <div class="col"></div>
     </div>
-    <div class="items my-2 text-center">
-        <a href="#"><i class="fab fa-linkedin" [ngStyle]="{'color':'red'}" [ngStyle]="{'color':'white'}"></i></a>
-        <a href="#"><i class="fab fa-stack-overflow" [ngStyle]="{'color':'red'}" [ngStyle]="{'color':'white'}"></i></a>
-        <a href="#"><i class="fab fa-github" [ngStyle]="{'color':'red'}" [ngStyle]="{'color':'white'}"></i></a>
+    
+    <div class="row userInformation my-3">
+      <div class="col"><p>{{prenom}}</p></div>
+      <div class="col"></div>
     </div>
   </div>
-  <div class="container mainDah2">
-        <div class="allFonction">
-            <button class="" appBtnChangeColor>ABOUT</button>
-            <button class="" appBtnChangeColor>LOISIR</button>
-            <button class="" appBtnChangeColor>DIPLOME</button>
-            <button class="" appBtnChangeColor>COMPETANCE</button>
-            <button class="" appBtnChangeColor>FORMATION</button>
-        </div>
+
+  <div>
+    <div class="btns my-5">
+      <button class="btne w-100 " appBtnChangeColor={{color}}><i class="far fa-user mx-3" [ngStyle]="{'font-size':'20px'}"></i>ABOUT</button>
+      <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-3"  [ngStyle]="{'font-size':'20px'}"></i>LOISIR</button>
+      <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-4"  [ngStyle]="{'font-size':'20px'}"></i>DIPLOME</button>
+      <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-4"  [ngStyle]="{'font-size':'20px'}"></i>COMPETANCE</button>
+      <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-3"  [ngStyle]="{'font-size':'20px'}"></i>FORMATION</button>
+      <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-3"  [ngStyle]="{'font-size':'20px'}"></i>ALL CV</button>
+      <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-3"  [ngStyle]="{'font-size':'20px'}"></i>CONTACT</button>
+      <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-3"  [ngStyle]="{'font-size':'20px'}"></i>BLOG</button>
+    </div>
   </div>
+
+  <div class="allLog my-5">
+   <div class="row">
+
+     <div class="col">
+      <a href="#"   [ngStyle]="{'backgroundColor':'#FF5959'}"><i class="fab fa-linkedin-in"  [ngStyle]="{'font-size':'25px'}"></i></a>
+     </div>
+     <div class="col">
+      <a href="#"   [ngStyle]="{'backgroundColor':'#FF5959'}"><i class="fab fa-stack-overflow"  [ngStyle]="{'font-size':'25px'}"></i></a>
+     </div>
+     <div class="col">
+      <a href="#"  [ngStyle]="{'backgroundColor':'#FF5959'}"><i class="fab fa-github"  [ngStyle]="{'font-size':'25px'}"></i></a>
+     </div>
+
+   </div>
+  </div>
+
 </div>

@@ -13,6 +13,7 @@ export class HearderAppComponent implements OnInit {
 
   information : information[] = []
   nom : string ;
+  color : string ="#4A63E7";
   constructor(private dbServiceinformation:DbServiceInformation) { }
 
   ngOnInit(): void {
@@ -24,7 +25,7 @@ export class HearderAppComponent implements OnInit {
     
   }
   changeColor(){
-    alert("I change color");
+    this.color = "#2F2F2F";
   }
 
 }
