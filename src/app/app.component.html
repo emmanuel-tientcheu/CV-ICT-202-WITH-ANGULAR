@@ -1,6 +1,16 @@
 <div class="allApp">
 
-       <app-hearder-app></app-hearder-app>
-       <app-das-bord></app-das-bord>
+      <div class="row">
+             <div class="col-3">
+                    <app-das-bord></app-das-bord>
+             </div>
+             <div class="col">
+              <app-hearder-app></app-hearder-app>
+              <div class="row m-5">
+                      <router-outlet></router-outlet>
+              </div>
+             </div>
+      </div>
+      
   
 </div>

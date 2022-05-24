@@ -1,0 +1,51 @@
+
+<div name="section-experiences" class="experience">
+    <section class=" padding">
+        <div (click)="addInformation()" class="section-title">
+            <h3 class="section-title" style="font-size: 40px;">Experiance</h3>
+            <button  class="btn text-center"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="spacer" data-height="80"></div>
+        
+        <div class="timeline" *ngFor="let exp of  experience"><div class="entry">
+            <div class="title"><span>{{exp.periode}}</span></div>
+            <div class="body">
+                <h4 class="mt-0">{{exp.titre}}</h4>
+                <p> {{exp.detail}}</p>
+            </div>
+        </div>
+        
+        <span class="timeline-line"></span>
+
+    </div>
+        </section>
+
+    </div>
+
+    
+<div class=" container sparing shadow-lg p-3 mb-5 bg-body rounded h-50 w-50" style="position:absolute;top:{{top}}">
+    <div class="row mt-5">
+  
+      <div class="row">          
+          <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">titre</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+      </div>
+      <div class="row">          
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">periode</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+      <div class="row">         
+          <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">detail</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+          <button class="btn  btn-secondary" (click)="close()">Add</button>
+      </div>
+    </div>
+  </div>

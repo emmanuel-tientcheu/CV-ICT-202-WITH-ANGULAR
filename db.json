@@ -45,17 +45,22 @@
       {
         "id":1,
         "nom": "HTML",
-        "evolution": "80%"
+        "evolution": "90%"
       },
       {
         "id":2,
         "nom": "CSS",
-        "evolution": "70%"
+        "evolution": "50%"
       },
       {
         "id":3,
         "nom": "autre nom",
-        "evolution": "autre pourcentage"
+        "evolution": "12%"
+      },
+      {
+        "id":3,
+        "nom": "autre nom",
+        "evolution": "12%"
       }
     ],
   

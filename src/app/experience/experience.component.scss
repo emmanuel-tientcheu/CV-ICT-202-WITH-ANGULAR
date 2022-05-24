@@ -1,0 +1,148 @@
+.experience{
+    width: 70%;
+    box-shadow: 0 6px 15px 0 rgb(74 99 231 / 20%);
+    border-radius: 5px;
+    padding: 20px;  
+    margin-top: 1%;
+
+}
+
+.section-title {
+    margin-bottom: 20px;
+     font-size: larger;
+     display: flex;
+     align-items: center;
+ 
+ }
+ 
+ .section-title button{
+     height: 50px;
+     width: 50px;
+     border: none;
+     margin-left: 20px;
+     background-color: #ff5959;
+     color: #fff;
+     font-weight: bolder;
+     border-radius: 50%;
+ }
+
+
+.spacer{
+    height: 80px;
+    width: 100%;
+}
+
+section.white-bg {
+    background: #fff;
+}
+.shadow-blue {
+    box-shadow: 0 6px 15px 0 rgb(74 99 231 / 10%);
+}
+
+
+
+
+h3 {
+    font-size: 24px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    font-family: "Poppins",sans-serif;
+    font-weight: 700;
+    margin: 20px 0;
+    font-size: 40px;
+}
+
+[data-height="80"] {
+    height: 5px;
+    background-color: #ff5959;
+    width:10% ;
+    border-radius: 5px;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+
+
+
+.timeline {
+    position: relative;
+    padding: 70px 0;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+
+
+.entry {
+    clear: both;
+    position: relative;
+}
+
+.entry .title {
+    float: left;
+    width: 20%;
+    position: relative;
+}
+
+.entry .body {
+    margin: 0 0 6em;
+    float: right;
+    width: 80%;
+    padding-left: 60px;
+}
+
+.entry .body p {
+    margin-bottom: 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: calc(20% + 2px);
+    bottom: 0;
+    width: 1px;
+    background: #ff5959;
+}
+
+.timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.entry .title {
+    float: left;
+    width: 20%;
+    position: relative;
+}
+
+.entry .title:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ff5959;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 4.5px;
+    top: 15%;
+    right: -8px;
+    z-index: 1;
+}
+
+
+.sparing{
+    opacity: 0.8;
+    margin-left:10%;
+    border-radius: 20px;
+   transition:1s;
+}
+
+.btn{
+    width: 10%;
+    padding: 10px;
+}

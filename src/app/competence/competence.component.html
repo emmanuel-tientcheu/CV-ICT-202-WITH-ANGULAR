@@ -1,0 +1,52 @@
+<div class="container-fluid competance mt-4">
+    <div name="section-skills" class="">
+        <section class="shadow-blue white-bg padding">
+            <div class="section-title">
+                <h3 class="section-title" style="font-size: 40px;">Competance</h3>
+                <button (click)="addInformation()" class="btn text-center"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="spacer" data-height="80"></div>
+
+            <p class="mb-0">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarks grove right at the coast of the Semantics</p>
+            <div class="mt-5">
+
+                <div class="row m-5">
+                    <div class="col-md-6 mt-50" *ngFor="let skill of competance ">
+                        <div><div class="skill-item">
+                            <div class="skill-info clearfix mt-3">
+                                <h4 class="float-left mb-3 mt-0 title">{{skill.nom}}</h4>
+                                <span class="float-right">{{skill.evolution}}</span>
+                            </div><div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85" style="width:{{skill.evolution}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 </div>
+                        </div>
+            </section>
+    </div>
+</div>
+
+<div class=" container sparing shadow-lg p-3 mb-5 bg-body rounded h-50 w-50" style="position:absolute;top:{{top}}">
+  <div class="row mt-5">
+
+    <div class="row">          
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">nom</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="row">         
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">pourcentage</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <button class="btn  btn-secondary" (click)="close()">Add</button>
+    </div>
+  </div>
+</div>

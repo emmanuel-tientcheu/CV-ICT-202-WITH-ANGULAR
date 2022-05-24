@@ -3,6 +3,7 @@ import { DbServiceInformation } from '../services/db.service';
 import { db } from '../dbStructure';
 import { information } from '../informationStructure';
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-das-bord',
   templateUrl: './das-bord.component.html',
@@ -17,7 +18,7 @@ export class DasBordComponent implements OnInit {
   fatimes = faTimes;
   color : string ="#4A63E7";
    
-  constructor(private dbServiceinformation:DbServiceInformation) { }
+  constructor(private dbServiceinformation:DbServiceInformation , private router : Router) { }
   
   ngOnInit(): void {
       this.dbServiceinformation.getInformationDb().subscribe((res)=>{
@@ -26,6 +27,18 @@ export class DasBordComponent implements OnInit {
       this.prenom = this.information[0].nom;
       this.image = this.information[0].image;
     });
+  }
+
+  goToAbout(){
+    this.router.navigate(['/about']);
+  }
+
+  gotoSkill(){
+    this.router.navigate(['/competance']);
+  }
+
+  goToExperiance(){
+    this.router.navigate(['/experiance']);
   }
  
 }
