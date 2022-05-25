@@ -1,0 +1,47 @@
+
+
+<header class="left float-left shadow-dark">
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+    <div class="header-inner d-flex align-items-start flex-column">
+        
+        <a href="/"><img src="../../assets/images/IMG_2127.png" alt="Bako Doe"></a>
+        <a class="site-title dot mt-3" href="/">Le Fuente</a>
+        <span class="site-slogan">Web Developer</span>
+
+
+        <div class="icon mt-2">
+        <ul class="social-icons list-inline ">
+            <li class="list-inline-item">
+                <a href="https://fa-linkedin.com">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://stackoverflow.com">
+                    <i class="fab fa-stack-overflow"></i>
+                </a>
+            </li>
+        <li class="list-inline-item">
+            <a href="https://www.instagram.com/">
+                <i class="fab fa-github"></i>
+             </a>
+        </li>
+        </ul>
+        
+    </div>
+        <nav>
+            <ul class="vertical-menu scrollspy">    
+                <li><button (click)="goToAbout()" class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-user mx-4" [ngStyle]="{'font-size':'20px'}"></i>ABOUT</button></li>          
+                <li>   <button (click)="goToExperiance()" class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-briefcase mx-4"  [ngStyle]="{'font-size':'20px'}"></i>Experiance</button></li>
+                <li><button  class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-graduation-cap mx-4"  [ngStyle]="{'font-size':'20px'}"></i>DIPLOME</button></li>
+                <li> <button (click)="gotoSkill()" class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-4"  [ngStyle]="{'font-size':'20px'}"></i>COMPETANCE</button></li>
+                <li><button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-info mx-4"  [ngStyle]="{'font-size':'20px'}"></i>FORMATION</button></li>
+                <li>   <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-border-all mx-4"  [ngStyle]="{'font-size':'20px'}"></i>ALL CV</button></li>
+
+            </ul>
+        </nav>
+       
+    </div>
+</header>
