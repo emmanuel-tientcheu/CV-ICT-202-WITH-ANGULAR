@@ -15,7 +15,8 @@
                     <div class="col-md-6 mt-50" *ngFor="let skill of competance ">
                         <div><div class="skill-item">
                             <div class="skill-info clearfix mt-3">
-                                <h4 class="float-left mb-3 mt-0 title">{{skill.nom}}</h4>
+                                <h4 class="float-left mb-3 mt-0 title">{{skill.nom}}</h4> 
+                                 <button  class="btn mx-2" (click)="deleteCompetance(skill)"><i class="fas fa-times"></i></button>
                                 <span class="float-right">{{skill.evolution}}</span>
                             </div><div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85" style="width:{{skill.evolution}}">
@@ -36,17 +37,22 @@
     <div class="row">          
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">nom</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input [(ngModel)]="nom" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
     </div>
     <div class="row">         
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">pourcentage</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input  [(ngModel)]="pourcentage" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
     </div>
     <div class="row justify-content-center mt-5">
-        <button class="btn  btn-secondary" (click)="close()">Add</button>
+        <button class="btn  btn-secondary" (click)="addSkill()">Add</button>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <button class="btn  btn-secondary" (click)="close()">close</button>
     </div>
   </div>
 </div>
+
+

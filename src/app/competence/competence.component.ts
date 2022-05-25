@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output , EventEmitter } from '@angular/core';
 import { competance } from '../competanceStructure';
 import {  DbServiceInformation } from '../services/db.service';
 
@@ -8,10 +8,16 @@ import {  DbServiceInformation } from '../services/db.service';
   styleUrls: ['./competence.component.scss']
 })
 export class CompetenceComponent implements OnInit {
+  @Output() onAddSkill:EventEmitter<competance> = new EventEmitter();
 
   competance:competance[]=[];
   display:string = 'hidden';
   top:string = '-550px';
+  id : number = 3 ;
+  nom:string = " ";
+  pourcentage:string = " ";
+
+
 
   constructor(private dbCompetance:DbServiceInformation) { }
 
@@ -30,5 +36,34 @@ export class CompetenceComponent implements OnInit {
   close(){
   
     this.top="-550px"
+  }
+
+  deleteCompetance(competance:competance){
+    this.dbCompetance.deleteCompetance(competance)
+    .subscribe(()=>(this.competance = this.competance.filter((c)=>c.id!==competance.id
+    )))
+  }
+
+  addSkill(){
+    var id:number=3;
+    id = this.id;
+    const newSkill = {
+      id : id+1,
+      nom : this.nom,
+      evolution : this.pourcentage
+    }
+    
+    if(this.id==this.id){
+      this.id = this.id+2;
+    }
+    this.dbCompetance.addSkillService(newSkill).subscribe((newSkill)=>(this.competance.push(newSkill)));
+    this.onAddSkill.emit(newSkill); 
+    this.nom=" ";
+    this.pourcentage=" ";
+    console.log(id);
+  } 
+
+  addSkillTest(){
+     console.log("text")
   }
 }
