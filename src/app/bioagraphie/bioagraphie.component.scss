@@ -1,0 +1,32 @@
+
+.section-title {
+    margin-bottom: 20px;
+     font-size: larger;
+     display: flex;
+     align-items: center;
+ 
+ }
+ 
+ .section-title button{
+     height: 50px;
+     width: 50px;
+     border: none;
+     margin-left: 20px;
+     background-color: #ff5959;
+     color: #fff;
+     font-weight: bolder;
+     border-radius: 50%;
+ }
+
+ 
+.sparing{
+    opacity: 0.8;
+    margin-left:10%;
+    border-radius: 20px;
+   transition:1s;
+}
+
+.btn{
+    width: 10%;
+    padding: 10px;
+}

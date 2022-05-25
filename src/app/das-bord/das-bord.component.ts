@@ -40,5 +40,9 @@ export class DasBordComponent implements OnInit {
   goToExperiance(){
     this.router.navigate(['/experiance']);
   }
+
+  goToBiographie(){
+    this.router.navigate(['/biographie']);
+  }
  
 }

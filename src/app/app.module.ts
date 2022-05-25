@@ -16,8 +16,7 @@ import { AboutInformationComponent } from './about-information/about-information
 import { CompetenceComponent } from './competence/competence.component';
 import { DisplayAddDirective } from './display-add.directive';
 import { ExperienceComponent } from './experience/experience.component';
-import { FDashbordComponent } from './f-dashbord/f-dashbord.component';
-import { FHeaderComponent } from './f-header/f-header.component'
+import { BioagraphieComponent } from './bioagraphie/bioagraphie.component'
 
 @NgModule({
   declarations: [
@@ -33,8 +32,7 @@ import { FHeaderComponent } from './f-header/f-header.component'
     CompetenceComponent,
     DisplayAddDirective,
     ExperienceComponent,
-    FDashbordComponent,
-    FHeaderComponent
+    BioagraphieComponent
   ],
   imports: [
     BrowserModule,
