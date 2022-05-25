@@ -1,46 +1,491 @@
-*{
-  margin: 0px;
-  padding: 0px;
+#top
+{
+    display: flex;
+    background-color: #2f2f2f;
+}
+button
+{
+    float: right;
+}
+
+input
+{
+    padding: 5px;
+    margin: 5px;
+}
+h2
+{
+    padding: 10px;
+}
+
+#left
+{
+    width: 40%;
+    border-right: 1px #808080 solid;
+    background-color: #2f2f2f;
+}
+#left h2
+{
+    border-bottom: 2px #43cad9 solid;
+    color: #d98e32;
+    background-color: #2f2f2f;
+}
+#left>div
+{
+  padding: 10px;
+  margin: 10px;
+
+}
+#right
+{
+    width: 60%;
+    background-color: #1c1a1a;
+}
+#right h2
+{
+    border-bottom: 1px #f2f2f2 solid;
+    color: #d98e32;
+}
+body
+{
+    background-color: #2f2f2f;
+    border: 2px #f2f2f2 solid;
+    margin: 0px;
+    padding: 8px;
+    color: #f2f2f2;
+    box-sizing: content-box;
+}
+#photo
+{
+    position: relative;
+    height: 40vh;
+}
+#photo img
+{
+    background-color: #f2f2f2;
+    border: 1px #f2f2f2 solid;
+    border-radius: 200px;
+    box-sizing: content-box;
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#icons
+{
+    display: flex;
+    justify-content: center;
+}
+#icons i
+{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#icons img
+{
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+}
+#resume-me div
+{
+    height: 15vh;
+    overflow-y: auto;
+}
+#resume-me p
+{
+ flex-wrap: wrap;
+ overflow-y: auto;
+}
+#name
+{
+    color: #d98e32;
+    border-bottom: 1px #43cad9 solid;
+}
+#mydiv
+{
+    background-color: #0d0d0d;
+    border: 1px #0d0d0d solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#curcus
+{
+    margin: 6px;
+    padding: 5px;
+}
+#expir
+{
+    margin: 6px;
+    padding: 5px;
+    height: 40vh;
+}
+
+#curcus> div
+{
+    margin-bottom: 10px;
+    padding: 6px;
+    width: 48%;
+}
+#expir> div
+{
+    margin-bottom: 10px;
+    padding: 6px;
+    width: 48%;
+}
+
+progress
+{
+    float: right;
+    top: top;
+    width: 55%;
 }
 
 
-*{
-  margin: 0px;
-  padding: 0px;
-}
-
-
-
-.allContainer{
-  display:flex;
-}
-
-.container-fluid{
-  padding: 10px 400px ;
-}
-
-
-@media screen and (max-width: 1300px) {
-  .dash-bord{
-    display: none;
-  }
-
-  .all{
+@media screen and (max-width: 810px)
+{
+    h2
+    {
+        padding: 10px;
+    }
+    #top
+    {
+        flex-wrap: wrap;
+    }
+    #left
+    {
       width: 100%;
+    }
+    #right
+    {
+        width: 100%;
+    }
+
+    #mydiv
+    {
+        background-color: #0d0d0d;
+        border: 5px #0d0d0d solid;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        width: 90%;
+        flex-direction: wrap;
+    }
+  }
+
+@media screen and (max-width: 20000px)
+{
+    body
+    {
+        background-color: #2f2f2f;
+        border: 2px #f2f2f2 solid;
+        margin: 0px;
+        padding: 8px;
+        color: #f2f2f2;
+        box-sizing: content-box;
+        height: fit-content;
+    }
+    #left
+    {
+        justify-content: inherit;
+    }
+    #right
+    {
+        justify-content: inherit;
+    }
+    #curcus
+    {
+        margin: 6px;
+        padding: 5px;
+    }
+    #expir
+    {
+        margin: 6px;
+        padding: 5px;
+    }
+
+    #curcus> div
+    {
+        margin-bottom: 10px;
+        padding: 6px;
+        width: 60%;
+    }
+    #expir> div
+    {
+        margin-bottom: 10px;
+        padding: 6px;
+        width: 60%;
+    }
+
+}
+footer
+{
+    float: right;
+    background-color: #2f2f2f;
+}
+
+body{
+  background-color: #2f2f2f;
+  margin-top:20px;
+}
+
+/*----------------------------------------------------------cursus timeline css-------------------------------------------------*/
+.main-timeline {
+  position: relative
+}
+
+.main-timeline:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: #c6c6c6;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0
+}
+
+.main-timeline .timeline {
+  margin-bottom: 40px;
+  position: relative
+}
+
+.main-timeline .timeline:after {
+  content: "";
+  display: block;
+  clear: both
+}
+
+.main-timeline .icon {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0
+}
+
+.main-timeline .icon:before,
+.main-timeline .icon:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.33s ease-out 0s
+}
+
+.main-timeline .icon:before {
+  background: #fff;
+  border: 2px solid #232323;
+  left: -3px
+}
+
+.main-timeline .icon:after {
+  border: 2px solid #c6c6c6;
+  left: 3px
+}
+
+.main-timeline .timeline:hover .icon:before {
+  left: 3px
+}
+
+.main-timeline .timeline:hover .icon:after {
+  left: -3px
+}
+
+.main-timeline .date-content {
+  width: 50%;
+  float: left;
+  margin-top: 22px;
+  position: relative
+}
+
+.main-timeline .date-content:before {
+  content: "";
+  width: 36.5%;
+  height: 2px;
+  background: #c6c6c6;
+  margin: auto 0;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0
+}
+
+.main-timeline .date-outer {
+  width: 125px;
+  height: 125px;
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+  z-index: 1
+}
+
+.main-timeline .date-outer:before,
+.main-timeline .date-outer:after {
+  content: "";
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.33s ease-out 0s
+}
+
+.main-timeline .date-outer:before {
+  background: #fff;
+  border: 2px solid #232323;
+  left: -6px
+}
+
+.main-timeline .date-outer:after {
+  border: 2px solid #c6c6c6;
+  left: 6px
+}
+
+.main-timeline .timeline:hover .date-outer:before {
+  left: 6px
+}
+
+.main-timeline .timeline:hover .date-outer:after {
+  left: -6px
+}
+
+.main-timeline .date {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 27%;
+  left: 0
+}
+
+.main-timeline .month {
+  font-size: 18px;
+  font-weight: 700
+}
+
+.main-timeline .year {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #232323;
+  line-height: 36px
+}
+
+.main-timeline .timeline-content {
+  width: 50%;
+  padding: 20px 0 20px 50px;
+  float: right
+}
+
+.main-timeline .title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 15px 0
+}
+
+.main-timeline .description {
+  margin-bottom: 0
+}
+
+.main-timeline .timeline:nth-child(2n) .date-content {
+  float: right
+}
+
+.main-timeline .timeline:nth-child(2n) .date-content:before {
+  left: 10px
+}
+
+.main-timeline .timeline:nth-child(2n) .timeline-content {
+  padding: 20px 50px 20px 0;
+  text-align: right
+}
+
+@media only screen and (max-width: 991px) {
+  .main-timeline .date-content {
+      margin-top: 35px
+  }
+  .main-timeline .date-content:before {
+      width: 22.5%
+  }
+  .main-timeline .timeline-content {
+      padding: 10px 0 10px 30px
+  }
+  .main-timeline .title {
+      font-size: 17px
+  }
+  .main-timeline .timeline:nth-child(2n) .timeline-content {
+      padding: 10px 30px 10px 0
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .container-fluid{
-      padding: 10px 200px ;
+@media only screen and (max-width: 767px) {
+  .main-timeline:before {
+      margin: 0;
+      left: 7px
+  }
+  .main-timeline .timeline {
+      margin-bottom: 20px
+  }
+  .main-timeline .timeline:last-child {
+      margin-bottom: 0
+  }
+  .main-timeline .icon {
+      margin: auto 0
+  }
+  .main-timeline .date-content {
+      width: 95%;
+      float: right;
+      margin-top: 0
+  }
+  .main-timeline .date-content:before {
+      display: none
+  }
+  .main-timeline .date-outer {
+      width: 110px;
+      height: 110px
+  }
+  .main-timeline .date-outer:before,
+  .main-timeline .date-outer:after {
+      width: 110px;
+      height: 110px
+  }
+  .main-timeline .date {
+      top: 30%
+  }
+  .main-timeline .year {
+      font-size: 12px
+  }
+  .main-timeline .timeline-content,
+  .main-timeline .timeline:nth-child(2n) .timeline-content {
+      width: 95%;
+      text-align: center;
+      padding: 10px 0
+  }
+  .main-timeline .title {
+      margin-bottom: 10px
   }
 }
-@media screen and (max-width: 1000px) {
-  .container-fluid{
-      padding: 10px 100px ;
-  }
-
-}
-
-
-
+ /*----------------------timeline experience--------------------------------------------------------------------------------*/

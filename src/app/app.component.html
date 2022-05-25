@@ -1,15 +1,118 @@
-<div class="allApp  container-fluid">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <!--<link rel="stylesheet" href="cv.css">-->
+    </head>
+     <body>
 
-       <app-hearder-app></app-hearder-app>
-       <div class="row main-row" >
-                   
-           <div class="col-4  dash-bord">
-               <app-f-dashbord class="dash-bord"></app-f-dashbord>
+ <div id="top">
+    <div id="left">
+
+    <!------------------------------------picture&infos---------------------------------------->
+         <div id="photo-info">
+                <div id="photo">
+                   <img id="myimg" [src]="imagescr" alt="preview">
+                </div>
+
+              <div id="name">
+                {{ storageObject?.name }}
+             </div>
+
+             <div id="address">
+                <p>{{ storageObject?.adresse.mail }}</p>
+                <p>{{ storageObject?.adresse.tel }}</p>
+                <p>{{ storageObject?.adresse.ville }}</p>
+             </div>
+         </div>
+
+    <!-------------------------------------icons----------------------------------------------->
+         <div id="icons">
+           <i><img src="assets/icons/github.png"></i>
+           <i><img src="assets/icons/linkedin.png"></i>
+           <i><img src="assets/icons/stack.png"></i>
+         </div>
+
+    <!---------------------------------------rusume_me-------------------------------------------->
+         <div id="resume-me">
+            <h2>{{ storageObject?.aboutme.title }}</h2>
+            <p>{{ storageObject?.aboutme.text }}</p>
+         </div>
+
+    <!----------------------------------------hobby-lang-------------------------------------------->
+          <div id="hobby-lang">
+              <div id="hobby">
+                 <h2>{{ storageObject?.loisir.title }}</h2>
+                 <div *ngFor="let hob of storageObject?.loisir.loisir_itself">
+                    <p>{{ hob }}</p>
+                 </div>
+              </div>
+
+              <div id="lang">
+                 <h2>{{ storageObject?.lang_spoken.title }}</h2>
+                 <div *ngFor="let lang of storageObject?.lang_spoken.lang_itself">
+                   <p>{{ lang }}</p>
+                 </div>
+              </div>
+          </div>
+
+    </div>
+    <!---------------------------------------------------------------------------------------------------->
+
+    <div id="right">
+    <!-----------------------------------------------curcus------------------------------------------------>
+        <div id="comp">
+           <h2>{{ storageObject?.competences.title }}</h2>
+           <div id="mydiv" *ngFor="let comp of storageObject?.competences.comp_itself">
+              <span>{{ comp.title }}</span>
+              <span><progress value="{{ comp.percentage }}" max="100">{{ comp.percentage }}</progress></span>
            </div>
-           <div class="col-8 all">
-                 <router-outlet class="all"></router-outlet>
-           </div> 
         </div>
-      
-  
+
+    <!-----------------------------------------------experience---------------------------------------------->
+          <div id="expir">
+            <h2>{{ storageObject?.experience.title }}</h2>
+            <div class="list-group w-auto" *ngFor="let exp of storageObject?.experience.exp_itself">
+              <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <p class="mb-0 opacity-75">{{ exp }}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+    <!------------------------------------------------competences--------------------------------------------->
+          <div id="curcus">
+            <h2>{{ storageObject?.cursus.title }}</h2>
+            <div class="container" *ngFor="let cur of storageObject?.cursus.curcus_itself">
+              <div class="main-timeline">
+                <!-- start experience section-->
+                  <div class="timeline">
+                  <div class="icon"></div>
+                   <div class="date-content">
+                   <div class="date-outer">
+                     <span class="date">
+                          <span class="year">{{ cur.periode }}</span>
+                      </span>
+                   </div>
+                  </div>
+                     <div class="timeline-content">
+                      <h5 class="title">{{ cur.titre }}</h5>
+                        <p class="description">
+                          {{ cur.ecole }}
+                        </p>
+                    </div>
+                    </div>
+                <!-- end experience section-->
+          </div>
+        </div>
+          </div>
+    </div>
 </div>
+    <footer>
+        <p>&copy BY AARC all right reserved</p>
+    </footer>
+     </body>
+</html>
