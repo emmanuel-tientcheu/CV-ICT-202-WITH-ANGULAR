@@ -1,7 +1,7 @@
 {
   "information": [
     {
-      "nom": "nom d'utilisateur",
+      "nom": "John Deo",
       "prenom": "prenom utilisateur",
       "image": "mainDash"
     }
@@ -18,12 +18,6 @@
       "titre": "ex: Prof de maths",
       "periode": "Fev. 2021-present",
       "detail": "repetiteur a domicile blabla bala ..."
-    },
-    {
-      "id": 3,
-      "titre": "...",
-      "periode": "...",
-      "detail": " ..."
     }
   ],
   "formation": [

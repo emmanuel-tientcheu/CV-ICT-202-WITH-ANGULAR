@@ -30,3 +30,13 @@
     width: 10%;
     padding: 10px;
 }
+
+.info{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.info i:hover{
+    color: tomato;
+}

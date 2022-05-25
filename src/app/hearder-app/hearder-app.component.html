@@ -1,19 +1,23 @@
 <div class="container headers mt-4 mx-3" appBtnChangeColor={{color}}>
-   <div class="row">
-       <div class="col-2 text-center mt-2">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-bars" [ngStyle]="{'font-size':'15px'}"></i>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <li><button (click)="changeColor()" class="dropdown-item" type="button">Action</button></li>
-              <li><button class="dropdown-item" type="button">Another action</button></li>
-              <li><button class="dropdown-item" type="button">Something else here</button></li>
-            </ul>
-          </div>
-       </div>
-       <div class="col-3 mt-1 mx-5 text-center">
-          <h5 [ngStyle]="{'font-size':'15px'}" [ngStyle]="{'color':'white'}">{{nom | uppercase}}</h5>
-       </div>
-   </div>
-</div>
+
+  <div class="info">
+    <div class=" col-2 text-center ">
+      <div class="dropdown">
+          <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-bars" ></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><button (click)="changeColor()" class="dropdown-item" type="button">Black</button></li>
+            <li><button class="dropdown-item" type="button">Another color</button></li>
+            <li><button class="dropdown-item" type="button">Another Color</button></li>
+          </ul>
+        </div>
+     </div>
+     <div class="col-3 ">
+        <h5 [ngStyle]="{'font-size':'25px'}" [ngStyle]="{'color':'white'}">{{nom | uppercase}}</h5>
+     </div>
+    </div>
+  </div>
+  
+  
+  

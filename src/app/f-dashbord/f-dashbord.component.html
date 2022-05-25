@@ -7,7 +7,7 @@
     <div class="header-inner d-flex align-items-start flex-column">
         
         <a href="/"><img src="../../assets/images/IMG_2127.png" alt="Bako Doe"></a>
-        <a class="site-title dot mt-3" href="/">Le Fuente</a>
+        <a class="site-title dot mt-3" href="/">{{nom | uppercase}}</a>
         <span class="site-slogan">Web Developer</span>
 
 
@@ -35,9 +35,9 @@
             <ul class="vertical-menu scrollspy">    
                 <li><button (click)="goToAbout()" class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-user mx-4" [ngStyle]="{'font-size':'20px'}"></i>ABOUT</button></li>          
                 <li>   <button (click)="goToExperiance()" class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-briefcase mx-4"  [ngStyle]="{'font-size':'20px'}"></i>Experiance</button></li>
-                <li><button  class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-graduation-cap mx-4"  [ngStyle]="{'font-size':'20px'}"></i>DIPLOME</button></li>
+                <li><button  (click)="goToBiographie()" class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-4"  [ngStyle]="{'font-size':'20px'}"></i>BIOGRAPHIE</button></li>
                 <li> <button (click)="gotoSkill()" class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-tools mx-4"  [ngStyle]="{'font-size':'20px'}"></i>COMPETANCE</button></li>
-                <li><button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-info mx-4"  [ngStyle]="{'font-size':'20px'}"></i>FORMATION</button></li>
+                
                 <li>   <button class="btne w-100 " appBtnChangeColor={{color}}><i class="fas fa-border-all mx-4"  [ngStyle]="{'font-size':'20px'}"></i>ALL CV</button></li>
 
             </ul>

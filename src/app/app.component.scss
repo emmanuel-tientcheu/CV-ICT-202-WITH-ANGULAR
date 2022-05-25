@@ -2,3 +2,46 @@
     margin: 0px;
     padding: 0px;
 }
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.allContainer{
+    display:flex;
+}
+
+
+.container-fluid{
+    padding: 10px 200px ;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .dash-bord{
+      display: none;
+    }
+
+    .all{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container-fluid{
+        padding: 10px 100px ;
+    }
+
+}
+
+
+

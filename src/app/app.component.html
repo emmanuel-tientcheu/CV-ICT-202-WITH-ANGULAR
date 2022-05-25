@@ -1,16 +1,15 @@
-<div class="allApp">
+<div class="allApp  container-fluid">
 
-      <div class="row">
-             <div class="col-3">
-                    <app-das-bord></app-das-bord>
-             </div>
-             <div class="col">
-              <app-hearder-app></app-hearder-app>
-              <div class="row m-5">
-                      <router-outlet></router-outlet>
-              </div>
-             </div>
-      </div>
+       <app-hearder-app></app-hearder-app>
+       <div class="row main-row" >
+                   
+           <div class="col-4  dash-bord">
+              <app-f-dashbord></app-f-dashbord>
+           </div>
+           <div class="col-8 all">
+                 <router-outlet class="all"></router-outlet>
+           </div> 
+        </div>
       
   
 </div>
