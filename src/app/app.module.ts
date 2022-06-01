@@ -18,7 +18,7 @@ import { DisplayAddDirective } from './display-add.directive';
 import { ExperienceComponent } from './experience/experience.component';
 import { BioagraphieComponent } from './bioagraphie/bioagraphie.component';
 import { FDashbordComponent } from './f-dashbord/f-dashbord.component'
-
+import { AuthFormComponent } from './auth-form/auth-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,8 @@ import { FDashbordComponent } from './f-dashbord/f-dashbord.component'
     DisplayAddDirective,
     ExperienceComponent,
     BioagraphieComponent,
-    FDashbordComponent
+    FDashbordComponent,
+    AuthFormComponent
   ],
   imports: [
     BrowserModule,
