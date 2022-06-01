@@ -1,0 +1,18 @@
+html, body { 
+    height: 100%;
+  }
+  body {
+    margin-top:5%;
+    font-family: roboto, sans-serif;
+  }
+  
+  .displayTable{
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 48px;
+   
+  
+  }
+  .displayTable mat-form-field {
+    width: 100%;  }
