@@ -1,46 +1,26 @@
-*{
-  margin: 0px;
-  padding: 0px;
+.image{
+  height: 40em;
+  background-size: cover;
+  width: auto;
+  background-image: url("../assets/images/les.jpg");
+  background-position: 50% 50%;
 }
-
-
-*{
-  margin: 0px;
-  padding: 0px;
-}
-
-
-
-.allContainer{
-  display:flex;
-}
-
-.container-fluid{
-  padding: 10px 400px ;
-}
-
-
-@media screen and (max-width: 1300px) {
-  .dash-bord{
-    display: none;
-  }
-
-  .all{
-      width: 100%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .container-fluid{
-      padding: 10px 200px ;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .container-fluid{
-      padding: 10px 100px ;
-  }
+.btn{
+  background-color: green;
+  color: aliceblue;
+  border-style: none;
 
 }
 
-
+div.form
+{
+  display: block;
+  text-align: center;
+}
+form
+{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 
