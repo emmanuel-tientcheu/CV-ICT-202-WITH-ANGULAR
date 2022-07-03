@@ -1,0 +1,87 @@
+{
+  "sign-in": {
+      "title": "WELCOME TO YOUR CV-APP",
+      "text": "Produce CV with your own informations and customise them with themes of your choice its free and your personal data is 100% secured",
+
+      "form":{
+        "title":"Please sign in",
+        "email":"Email address",
+        "pass":"password",
+        "no":"No account yet?",
+        "register":"Register Now",
+        "button":"Sign in"
+      }
+  },
+
+  "sign-up":
+  {
+    "title":"Sign up",
+
+    "form":{
+      "email":"Your Email",
+      "name":"Your Name",
+      "prenom":"Your Surname",
+      "datenais":"Your date of birth",
+      "pass":"Password",
+      "repeatpass":"Repeat your password",
+      "button":"Register",
+      "already":"Already have an account?",
+      "log":"Log In"
+    }
+  },
+
+  "home":
+  {
+    "title1":"WELCOME TO YOUR Home Page",
+    "title2":"Produce CV with your own information and customise them with themes of your choice",
+    "nameclick":"Click here to add your name",
+
+    "menu":
+    {
+      "about":"ABOUT",
+      "all":"ALL CV",
+      "link":"LINKS",
+      "lang":"LANGUAGES",
+      "hob":"HOBBY",
+      "cert":"CERTIFICATION",
+      "comp":"COMPETANCE",
+      "cur":"CURSUS",
+      "exp":"EXPERIENCE"
+    }
+
+  },
+
+  "aboutme":
+  {
+   "title":"Biography",
+   "greet":"Hello",
+   "i":"I am ",
+   "info":"Informations",
+   "labels":
+    {
+      "email":"Email",
+      "nom":"Name",
+      "prenom":"Surname",
+      "site":"Address",
+      "ln":"Place of Birth",
+      "dn":"Date of Birth",
+      "prof":"Profession",
+      "add":"Your address",
+      "ln1":"Your Place of Birth",
+      "dn1":"Your Date of Birth",
+      "prof1":"Your Profession"
+    },
+    "modal":
+    {
+      "title":"Enter Your Biography",
+      "button":"Save"
+    }
+  },
+
+  "alerts":
+  {
+    "alert1":"Your date of birth cannot be after today please change it!",
+    "alert2":"Sorry!! you are too young",
+    "alert3":"SORRY!! Something when wrong"
+  }
+}

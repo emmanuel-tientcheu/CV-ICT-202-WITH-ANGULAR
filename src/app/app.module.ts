@@ -1,49 +1,74 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { QRCodeModule } from 'angular2-qrcode';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { EnterNameDirective } from './enter-name.directive';
-import { HttpClientModule } from '@angular/common/http';
-import { DasBordComponent } from './das-bord/das-bord.component';
-import { BtnChangeColorDirective } from './btn-change-color.directive';
-import { HearderAppComponent } from './hearder-app/hearder-app.component';
-import { ProfilComponent } from './profil/profil.component';
-import { AllComponent } from './all/all.component';
-import { ProfileUserComponent } from './profile-user/profile-user.component';
-import { AboutInformationComponent } from './about-information/about-information.component';
-import { CompetenceComponent } from './competence/competence.component';
-import { DisplayAddDirective } from './display-add.directive';
-import { ExperienceComponent } from './experience/experience.component';
-import { BioagraphieComponent } from './bioagraphie/bioagraphie.component';
-import { FDashbordComponent } from './f-dashbord/f-dashbord.component'
+
+// Firebase services + environment module
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { HomeComponent } from './home/home.component';
+import { AboutmeComponent } from './home/aboutme/aboutme.component';
+import { CompetencesComponent } from './home/competences/competences.component';
+import { ExperienceComponent } from './home/experience/experience.component';
+import { CursusComponent } from './home/cursus/cursus.component';
+import { HobbyComponent } from './home/hobby/hobby.component';
+import { LanguageComponent } from './home/language/language.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CertificationComponent } from './home/certification/certification.component';
+import { LinksComponent } from './home/links/links.component';
+import { AllCvComponent } from './all-cv/all-cv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EnterNameDirective,
-    DasBordComponent,
-    BtnChangeColorDirective,
-    HearderAppComponent,
-    ProfilComponent,
-    AllComponent,
-    ProfileUserComponent,
-    AboutInformationComponent,
-    CompetenceComponent,
-    DisplayAddDirective,
+    SignInComponent,
+    SignUpComponent,
+    HomeComponent,
+    AboutmeComponent,
+    CompetencesComponent,
     ExperienceComponent,
-    BioagraphieComponent,
-    FDashbordComponent
+    CursusComponent,
+    HobbyComponent,
+    LanguageComponent,
+    CertificationComponent,
+    LinksComponent,
+    AllCvComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     HttpClientModule,
-    FormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
+    QRCodeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
