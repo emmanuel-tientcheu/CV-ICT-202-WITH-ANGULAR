@@ -17,7 +17,8 @@ import { CompetenceComponent } from './competence/competence.component';
 import { DisplayAddDirective } from './display-add.directive';
 import { ExperienceComponent } from './experience/experience.component';
 import { BioagraphieComponent } from './bioagraphie/bioagraphie.component';
-import { FDashbordComponent } from './f-dashbord/f-dashbord.component'
+import { FDashbordComponent } from './f-dashbord/f-dashbord.component';
+import { FrontendComponent } from './frontend/frontend.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FDashbordComponent } from './f-dashbord/f-dashbord.component'
     DisplayAddDirective,
     ExperienceComponent,
     BioagraphieComponent,
-    FDashbordComponent
+    FDashbordComponent,
+    FrontendComponent
   ],
   imports: [
     BrowserModule,
