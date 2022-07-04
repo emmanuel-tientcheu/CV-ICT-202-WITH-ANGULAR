@@ -12,6 +12,7 @@ import { LanguageComponent } from './home/language/language.component';
 import { CertificationComponent } from './home/certification/certification.component';
 import { AllCvComponent } from './all-cv/all-cv.component';
 import { LinksComponent } from './home/links/links.component';
+import { Template1Component } from './all-cv/template/template1/template1.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -32,7 +33,11 @@ const routes: Routes = [
         {path: 'link', component: LinksComponent},
       ]
     },
-    {path: 'all-cv', component: AllCvComponent},
+    {path: 'all-cv', component: AllCvComponent,
+       children : [
+        {path: 'temp1', component: Template1Component}
+       ]
+  },
 ];
 
 @NgModule({

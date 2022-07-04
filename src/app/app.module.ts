@@ -29,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CertificationComponent } from './home/certification/certification.component';
 import { LinksComponent } from './home/links/links.component';
 import { AllCvComponent } from './all-cv/all-cv.component';
+import { Template1Component } from './all-cv/template/template1/template1.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AllCvComponent } from './all-cv/all-cv.component';
     LanguageComponent,
     CertificationComponent,
     LinksComponent,
-    AllCvComponent
+    AllCvComponent,
+    Template1Component
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,43 @@
-<p>all-cv works!</p>
+<body>
+
+<h2 class="text-center" >Please Chose  The template you wish to use for your CV</h2><br>
+<div id="templates" class="d-flex justify-content-around">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="content" #content>
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="" [routerLink]="['/all-cv','temp1']" class="btn btn-primary">Select</a>
+    </div>
+  </div>
+</div>
+
+<br><br><div class="text-center" id="settings">
+  <h3>Settings</h3>
+</div>
+
+<br><br><div id="preview" class="text-center">
+  <h3>Preview</h3>
+  <router-outlet>
+
+  </router-outlet>
+</div>
+</body>
