@@ -1,0 +1,40 @@
+<div class="content {{storedTheme}} " role="main">
+
+  <div class="theme-options">
+  <div id="theme-white" 
+  [ngClass]="(storedTheme === 'theme-white')? 'active':''"
+  (click)="setTheme('theme-white')">
+  </div>
+  <div id="theme-blue" 
+  [ngClass]="(storedTheme === 'theme-blue')? 'active':''"
+  (click)="setTheme('theme-blue')">
+  </div>
+  <div id="theme-orange"
+  [ngClass]="(storedTheme === 'theme-orange')? 'active':''" 
+  (click)="setTheme('theme-orange')">
+  </div>
+  <div id="theme-purple"
+  [ngClass]="(storedTheme === 'theme-purple')? 'active':''" 
+  (click)="setTheme('theme-purple')">
+  </div>
+  <div id="theme-green"
+  [ngClass]="(storedTheme === 'theme-green')? 'active':''" 
+  (click)="setTheme('theme-green')">
+ </div>
+  <div id="theme-black" 
+  [ngClass]="(storedTheme === 'theme-black')? 'active':''"
+  (click)="setTheme('theme-black')"></div>
+ </div>
+<input type="color">
+ <div class="content-box">
+  <h3>multiple color theme</h3>
+  <h5>(angular,css/scss,localstorage)</h5>
+  <p>
+    Épreuve qui permet de déceler les
+     aptitudes d'une personne et fournit
+     des renseignements sur ses connaissances, son caractère, etc.
+
+  </p>
+  <p>--WEBTYPLEPRESS.COM</p>
+ </div>
+</div>
