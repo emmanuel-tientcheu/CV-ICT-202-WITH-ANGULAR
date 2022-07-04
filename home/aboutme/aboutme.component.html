@@ -1,0 +1,99 @@
+
+  <img id="prof" src="../../assets/images/personne.png">
+
+  <div id="about">
+    <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+      <h2 class="fw-bold">{{ 'aboutme.title' | translate }}</h2>
+         <div class="row mt-2">
+             <div class="col">
+                <div class="row mb-4">
+                    <h3 class="fw-bold">{{ 'aboutme.greet' | translate }},</h3>
+                </div>
+                <div class="row ">
+                  <!-- add ngif to print this if user has no info from firebase-->
+                    <p type="button" (click)="opentextera(mymodal)" *ngIf="!userState.biographie; else abt" id="abtmetxt">{{ 'aboutme.i' | translate }}<strong>{{(userState.nom)? userState.nom :'myname'}}</strong> Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Veniam, odio.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+                         voluptatum.
+                      </p>
+                     <ng-template type="button" (click)="opentextera(mymodal)" #abt><p>{{ userState.biographie }}</p></ng-template>
+
+                <div class="row ">
+                  <!-- add ngif to print this if user has no info from firebase-->
+                  <h3 class="fw-bold">{{ 'aboutme.info' | translate }}</h3>
+                  <div id="contact">
+                    <div *ngIf="!userState.email; else m">
+                      <p id="contain0"><span>{{ 'aboutme.labels.email' | translate }} : </span><span  type="button" (click)="openinput('contain0','mail0','email','email')" id="mail0" >myaddress@gmail.com</span></p>
+                    </div>
+                      <ng-template #m>
+                        <p id="contain1"><span>{{ 'aboutme.labels.email' | translate }} : </span><span  type="button" (click)="openinput('contain1','mail1','email','email')" id="mail1">{{ userState.email }}</span></p>
+                      </ng-template>
+
+
+                    <div *ngIf="!userState.nom; else t">
+                      <p id="contain2"><span>{{ 'aboutme.labels.nom' | translate }} : </span><span type="button" (click)="openinput('contain2','nom0','text','nom')" id="nom0"> Your name</span></p>
+                   </div>
+                   <ng-template #t>
+                    <p id="contain3"><span>{{ 'aboutme.labels.nom' | translate }} : </span><span type="button" (click)="openinput('contain3','nom1','text','nom')" id="nom1">{{ userState.nom }}</span></p>
+                   </ng-template>
+
+                    <div *ngIf="!userState.prenom; else t1">
+                        <p id="contain4"><span>{{ 'aboutme.labels.prenom' | translate }} : </span><span type="button" (click)="openinput('contain4','prenom0','text','prenom')" id="prenom0">Your surname</span></p>
+                     </div>
+                     <ng-template #t1>
+                      <p id="contain5"><span>{{ 'aboutme.labels.prenom' | translate }} : </span><span type="button" (click)="openinput('contain5','prenom1','text','prenom')" id="prenom1">{{ userState.prenom }}</span></p>
+                     </ng-template>
+
+                    <div *ngIf="!userState.address; else s">
+                      <p id="contain6"><span>{{ 'aboutme.labels.site' | translate }} : </span><span type="button" (click)="openinput('contain6','add0','text','add')" id="add0">{{ 'aboutme.labels.add'| translate }}</span></p>
+                    </div>
+                    <ng-template #s>
+                        <p id="contain7"><span>{{ 'aboutme.labels.site' | translate }} : </span><span type="button" (click)="openinput('contain7','add1','text','add')" id="add1">{{ userState.address }}</span></p>
+                    </ng-template>
+
+                    <div *ngIf="!userState.lieuNaissance; else l">
+                      <p id="contain8"><span>{{ 'aboutme.labels.ln' | translate }} : </span><span type="button" (click)="openinput('contain8','ln0','text','ln')" id="ln0">{{ 'aboutme.labels.ln1'| translate }}</span></p>
+                    </div>
+                    <ng-template #l>
+                        <p id="contain9"><span>{{ 'aboutme.labels.ln' | translate }} : </span><span type="button" (click)="openinput('contain9','ln1','text','ln')" id="ln1">{{ userState.lieuNaissance }}</span></p>
+                    </ng-template>
+
+                    <div *ngIf="!userState.profession; else p">
+                      <p id="contain10"><span>{{ 'aboutme.labels.prof' | translate }} : </span><span type="button" (click)="openinput('contain10','prof0','text','pr')" id="prof0">{{ 'aboutme.labels.prof1'| translate }}</span></p>
+                    </div>
+                    <ng-template #p>
+                        <p id="contain11"><span>{{ 'aboutme.labels.prof' | translate }} : </span><span type="button" (click)="openinput('contain11','prof1','text','pr')" id="prof1">{{ userState.profession }}</span></p>
+                    </ng-template>
+
+                    <div *ngIf="!userState.dateNaissance; else d">
+                      <p id="contain12"><span>{{ 'aboutme.labels.dn' | translate }} : </span><span type="button" (click)="openinput('contain12','dn0','date','dn')" id="dn0">{{ 'aboutme.labels.dn1'| translate }}</span></p>
+                    </div>
+                    <ng-template #d>
+                        <p id="contain13"><span>{{ 'aboutme.labels.dn' | translate }} : </span><span type="button" (click)="openinput('contain13','dn1','date','dn')" id="dn1">{{ userState.dateNaissance }}</span></p>
+                    </ng-template>
+                  </div>
+         </div>
+
+<!-- ************************************************************************modals***************************************************************** -->
+<!-- *********************************************modals1*************************************************  -->
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">{{ 'aboutme.modal.title' | translate }}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-outline w-100">
+        <textarea class="form-control" id="bio" rows="4"
+          style="background: #fff;" placeholder="aboutme..."></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')" (click)="savebio()">{{ 'aboutme.modal.button' | translate }}</button>
+    </div>
+  </ng-template>
+        </div>
+      </div>
+   </div>
+

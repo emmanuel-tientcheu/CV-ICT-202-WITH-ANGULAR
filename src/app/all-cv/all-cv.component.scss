@@ -1,0 +1,22 @@
+body{
+  margin: 20px;
+  padding: 20px;
+}
+
+#preview
+{
+  border: 2px solid gray;
+  background-color: gray;
+  border-radius: 25px;
+}
+
+#utils{
+  float: right;
+  display: inline;
+}
+
+#sett
+{
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,101 @@
+{
+  "sign-in": {
+      "title": "BIENVENUE SUR CV-APP",
+      "text": "Créez des CV avec vos propres informations et personnalisez-les avec les thèmes de votre choix c'est gratuit et vos données personnelles sont 100% sécurisées",
+
+      "form":{
+        "title":"Veuillez vous connecter",
+        "email":"Adresse Email",
+        "pass":"Mots de passe",
+        "no":"Pas encore de compte ",
+        "register":"Inscrivez-vous maintenant",
+        "button":"Connexion"
+      }
+  },
+
+  "sign-up":
+  {
+    "title":"S'inscrire",
+
+    "form":{
+      "email":"Votre Email",
+      "name":"Votre Nom",
+      "prenom":"Votre Prenom",
+      "datenais":"Votre date de naissance",
+      "pass":"Mots de passe",
+      "repeatpass":"Répétez votre mot de passe",
+      "button":"S'inscrire",
+      "already":"Vous avez déjà un compte?",
+      "log":"Connexion"
+    }
+  },
+
+  "home":
+  {
+    "title1":"BIENVENUE SUR VOTRE Page d'accueil",
+    "title2":"Produisez des CV avec vos propres informations et personnalisez-les avec les thèmes de votre choix",
+    "nameclick":"Cliquez ici pour ajouter votre nom",
+    "back":"deconnexion",
+
+    "menu":
+    {
+      "about":"A PROPOS",
+      "all":"TOUS CV",
+      "link":"LIENS",
+      "lang":"LANGUES",
+      "hob":"LOISIR",
+      "cert":"CERTIFICAT",
+      "comp":"COMPÉTENCE",
+      "cur":"CURSUS",
+      "exp":"VIVRE"
+    }
+
+  },
+
+  "aboutme":
+  {
+   "title":"Biographie",
+   "greet":"Salut",
+   "i":"Je suis ",
+   "info":"Informations",
+   "labels":
+    {
+      "email":"Email",
+      "nom":"Nom",
+      "prenom":"Prenom",
+      "site":"Adresse",
+      "ln":"Lieu de naissance",
+      "dn":"Date de naissance",
+      "prof":"Votre Profession",
+      "add":"Votre adresse",
+      "ln1":"Votre Lieu de naissance",
+      "dn1":"Votre Date de naissance",
+      "prof1":"Votre Profession"
+    },
+    "modal":
+    {
+      "title":"Entre Votre Biographie",
+      "button":"Enregistrer"
+    }
+  },
+
+  "all":
+  {
+    "back":"retour",
+    "title":"Veuillez choisir le modèle que vous souhaitez utiliser pour votre CV",
+    "button":"Selectionner",
+    "titletemp":"Modèle",
+    "s":"Réglages",
+    "p":"Aperçu",
+    "font":"Choisissez votre polices",
+    "t":"Chose your thème"
+  },
+
+  "alerts":
+  {
+    "alert1":"Votre date de naissance ne peut pas être postérieure à aujourd'hui, veuillez la modifier !",
+    "alert2":"Désolé!! Vous es trop jeune",
+    "alert3":"Désolé!! Quelque chose s'est mal passé"
+  }
+
+}

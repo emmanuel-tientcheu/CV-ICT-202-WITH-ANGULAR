@@ -1,0 +1,64 @@
+
+<body class="text-center">
+  <button id="trans"  data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-language fa-lg me-6 fa-fw"></i>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown">
+    <button class="dropdown-item" href="#" (click)="service.useLanguage('en')">Engish</button>
+    <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+  </ul>
+  <h1>{{ 'sign-in.title' | translate }}</h1>
+  <h3>{{ 'sign-in.text' | translate }}</h3>
+  <main class="form-signin w-70 m-auto">
+
+      <h1 class="h3 mb-3 fw-normal">{{ 'sign-in.form.title' | translate }}</h1>
+
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" #userName required>
+        <label for="floatingInput">{{ 'sign-in.form.email' | translate }}</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" placeholder="Password" #userPassword required>
+        <label for="floatingPassword">{{ 'sign-in.form.pass' | translate }}</label>
+      </div>
+
+      <div>
+        <p>{{ 'sign-in.form.no' | translate }}<a href="./sign-up">{{ 'sign-in.form.register' | translate }}</a></p>
+      </div>
+      <button class="w-30 btn btn-lg btn-primary" type="submit" (click)="service.SignIn(userName.value,userPassword.value)">{{ 'sign-in.form.button' | translate }}</button>
+  </main>
+  </body>
+
+
+
+<!--<div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="authBlock">
+      <h3>Signin</h3>
+      <div class="formGroup">
+        <input type="text" class="form-control" placeholder="Username" #userName required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="form-control" placeholder="Password" #userPassword required>
+      </div>
+
+      <div class="formGroup">
+        <input type="button" class="btn btn-primary btn-block" value="Sign in"
+          (click)="ngAuthService.SignIn(userName.value, userPassword.value)">
+      </div>
+
+
+      <div class="forgotPassword">
+        <span routerLink="/forgot-password">Forgot Password?</span>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <span>Not registered yet?<span class="redirect" routerLink="/sign-up"> Register</span></span>
+    </div>
+
+  </div>
+</div>-->
+

@@ -1,0 +1,86 @@
+<body>
+
+  <div id="utils">
+
+    <i id="trans" class="fa-solid fa-language fa-lg me-4 fa-fw" data-bs-toggle="dropdown"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdown">
+    <button class="dropdown-item" href="#" (click)="service.useLanguage('en')">Engish</button>
+    <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+  </ul>
+   <span><i class="fa-solid fa-right-from-bracket" type="button" alt="logout" style="color: black;" [routerLink]="['/home']">{{ 'all.back' | translate }}</i></span>
+ </div>
+
+<h2 class="text-center" >{{ 'all.title' | translate }}</h2><br>
+<div id="templates" class="d-flex justify-content-around">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="../../assets/images/personne.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ 'all.titletemp' | translate }} 1</h5>
+      <a href="#" class="btn btn-primary" [routerLink]="['/all-cv','temp1']">{{ 'all.button' | translate }}</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="../../assets/images/personne.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ 'all.titletemp' | translate }} 2</h5>
+      <a href="#" class="btn btn-primary" [routerLink]="['/all-cv','temp2']">{{ 'all.button' | translate }}</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="content" #content>
+    <img class="card-img-top" src="../../assets/images/personne.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ 'all.titletemp' | translate }} 3</h5>
+      <a href="" class="btn btn-primary" [routerLink]="['/all-cv','temp3']">{{ 'all.button' | translate }}</a>
+    </div>
+  </div>
+</div>
+
+<br><br><div class="text-center" id="settings">
+  <h3>{{ 'all.s' | translate }}</h3>
+  <div id="sett">
+    <div id="font">
+      <p>{{ 'all.font' | translate }}</p><i id="trans" class="fa-solid fa-caret-down fa-lg me-4 fa-fw" data-bs-toggle="dropdown"></i>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdown">
+        <button class="dropdown-item" href="#" style="font-family: Arial;" (click)="changefont('Arial')">Arial</button>
+        <button class="dropdown-item" href="#" style="font-family: Helvetica;" (click)="changefont('Helvetica')">Helvetica</button>
+        <button class="dropdown-item" href="#" style="font-family: Verdana;" (click)="changefont('Verdana')">Verdana</button>
+        <button class="dropdown-item" href="#" style="font-family: Calibri;" (click)="changefont('Calibri')">Calibri</button>
+        <button class="dropdown-item" href="#" style="font-family: Noto;" (click)="changefont('Noto')">Noto</button>
+        <button class="dropdown-item" href="#" style="font-family: Century Gothic;" (click)="changefont('Century Gothic')">Century Gothic</button>
+        <button class="dropdown-item" href="#" style="font-family: Geneva;" (click)="changefont('Geneva')">Geneva</button>
+        <button class="dropdown-item" href="#" style="font-family: Avanta Garde;" (click)="changefont('Avanta Garde')">Avanta Garde</button>
+        <button class="dropdown-item" href="#" style="font-family: Optima;" (click)="changefont('Optima')">Optima</button>
+        <button class="dropdown-item" href="#" style="font-family: Futara;" (click)="changefont('Futara')">Futara</button>
+      </ul>
+    </div>
+
+    <div id="font">
+      <p>{{ 'all.t' | translate }}</p><i id="trans" class="fa-solid fa-caret-down fa-lg me-4 fa-fw" data-bs-toggle="dropdown"></i>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdown">
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('en')">Orange</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+        <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<br><br><div id="preview" class="text-center">
+  <h3>{{ 'all.p' | translate }}</h3>
+  <router-outlet>
+
+  </router-outlet>
+</div>
+</body>

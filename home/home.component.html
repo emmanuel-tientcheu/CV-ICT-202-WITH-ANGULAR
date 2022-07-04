@@ -1,0 +1,82 @@
+<!--Adiding qr code<qr-code [value]="'www.google.com'"></qr-code>-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CvWeb</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <div id="utils">
+
+      <i id="trans" class="fa-solid fa-language fa-lg me-4 fa-fw" data-bs-toggle="dropdown"></i>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdown">
+      <button class="dropdown-item" href="#" (click)="service.useLanguage('en')">Engish</button>
+      <button class="dropdown-item" href="#" (click)="service.useLanguage('fr')">french</button>
+    </ul>
+     <span><i class="fa-solid fa-right-from-bracket" type="button" alt="logout" style="color: white;" (click)="service.SignOut()">{{ 'home.back' | translate }}</i></span>
+   </div>
+
+   <div id="left">
+      <div id="up" style="text-align: center;">
+         <h1 class="h1">{{ 'home.title1' | translate }}</h1>
+         <h3 class="h3">{{ 'home.title2' | translate }}</h3>
+       </div>
+       <div id="down">
+          <div id="nav-sidebar">
+              <img src="../../assets/images/personne.png" alt="Bako Doe">
+              <div id="name">
+                <p type="button" (click)="changetoinput()" id="toggle" style="color: white;">{{(userState.nom)? userState.nom :'home.nameclick' | translate }}</p>
+                <div style="display: none;" id="input"><input id="nameinput" type="text" placeholder="My Name"><button class="btn btn-primary" (click)="setvalfrominput()" id="set">set</button></div>
+              </div>
+
+               <div id="menu">
+                 <nav>
+                   <ul class="vertical-menu scrollspy" id="list">
+                     <i class="fas fa-user mx-4" [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/home','aboutme']">{{ 'home.menu.about' | translate }}</a><br>
+                     <i class="fas fa-briefcase mx-4"  [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/home','experience']">{{ 'home.menu.exp' | translate }}</a><br>
+                     <i class="fa-solid fa-certificate mx-4"  [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/home','cursus']">{{ 'home.menu.cur' | translate }}</a><br>
+                     <i class="fas fa-tools mx-4"  [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/home','competences']">{{ 'home.menu.comp' | translate }}</a><br>
+                     <i class="fa-solid fa-certificate mx-4"  [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/home','certification']">{{ 'home.menu.cert' | translate }}</a><br>
+                     <i class="fa-solid fa-futbol mx-4" [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/home','link']">{{ 'home.menu.link' | translate }}</a><br>
+                     <i class="fa-solid fa-language mx-4" [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/home','langauge']">{{ 'home.menu.lang' | translate }}</a><br>
+                     <i class="fas fa-tools mx-4"  [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/home','hobby']">{{ 'home.menu.hob' | translate }}</a><br>
+                     <i class="fas fa-border-all mx-4"  [ngStyle]="{'font-size':'20px'}"></i><a href="" [routerLink]="['/all-cv']">{{ 'home.menu.all' | translate }}</a><br>
+                   </ul>
+                 </nav>
+               </div>
+              </div>
+          <div id="content">
+              <img id="paysage" src="../../assets/images/im.jpg">
+
+              <router-outlet id="mycvsection">
+
+              </router-outlet>
+          </div>
+       </div>
+  </div>
+</body>
+</html>
+
+
+
+<!--<div class="container mt-5" style="max-width: 600px">
+
+  <div class="row" *ngIf="ngAuthService.userState as user">
+    <div class="media">
+        <h2>Hi: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h2>
+        <p>User ID: <strong>{{user.uid}}</strong></p>
+        <p>Email: <strong>{{user.email}}</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <a class="btn btn-block btn-primary" (click)="ngAuthService.SignOut()">
+    Sign Out
+  </a>
+-->
+
+

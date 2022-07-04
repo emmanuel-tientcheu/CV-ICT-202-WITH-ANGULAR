@@ -1,0 +1,110 @@
+<div id="comp">
+  <div class="row mt-2">
+      <div class="col">
+         <div class="row mb-4">
+             <h3 class="fw-bold">MY COMPETENCES</h3>
+         </div>
+         <div class="row ">
+           <!-- add ngif to print infos from firebase in a timeline-->
+           <!----timeline-->
+           <ng-template class="w-100" #t>
+              <div id="mydiv" *ngFor="let comp of array">
+                <div *ngIf="comp.id != '' " class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="card">
+                              <div class="card-body">
+                                <i type="button" id="ic" class="fa-solid fa-pen-fancy" (click)="opentextera(mymodal1)" (click)="saveid(comp.id)"></i><br><br>
+                                <i type="button" id="ic" class="fa-solid fa-trash-can" (click)="saveid(comp.id)" (click)="deletecomp()"></i>
+                                  <div id="content">
+                                      <ul class="timeline">
+                                          <li class="event">
+                                              <h3>Title : {{ comp.title }}</h3>
+                                              <p>dateDebut: {{ comp.dateDebut }}</p>
+                                              <p>dateFin : {{ comp.deteFin }}</p>
+                                              <p>{{ comp.percentage }}% <progress max="100" value="{{comp.percentage}}"></progress></p>
+                                              <p>Cathegory : {{ comp.cathegory }}</p>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+             </div>
+           </ng-template>
+
+           <!---**********-->
+           <!-----**************print this else*********-->
+          <div *ngIf="array.length == 1; else t">
+           <h4 style="text-align:center;color: red;">
+             SORRY!!!
+           </h4>
+           <h5 style="text-align:center">
+             You have no nothing registered yet!
+           </h5>
+           <p style="text-align:center">
+             Try the add button to add some competences
+           </p>
+          </div>
+         </div>
+         <span style="float: right;"><i class="fa-solid fa-marker" type="button" (click)="opentextera(mymodal)">add</i></span>
+         <div>
+         </div>
+      </div>
+  </div>
+</div>
+
+<!---******************modals****************************--->
+<ng-template #mymodal let-modal>
+<div class="modal-header">
+ <h4 class="modal-title" id="modal-basic-title">Enter Your Competence you wish to add</h4>
+ <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+   <span aria-hidden="true">×</span>
+ </button>
+</div>
+<div class="modal-body">
+ <div class="form-outline w-100">
+  <input type="text" class="form-control" id="title" placeholder="title"><br>
+  <input type="number" class="form-control" id="percentage" placeholder="80"><br>
+  <input type="date" class="form-control" id="datedeb"><br>
+  <input type="date" class="form-control" id="datefin"><br>
+  <label for="cars">Choose a cathegory:</label>
+  <select id="cathegory" class="form-control">
+    <option value="Programmation">Programmation</option>
+    <option value="web_design">web_design</option>
+    <option value="manager">manager</option>
+  </select>
+ </div>
+</div>
+<div class="modal-footer">
+ <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')" (click)="addcomp()">Save</button>
+</div>
+</ng-template>
+
+<ng-template #mymodal1 let-modal>
+  <div class="modal-header">
+   <h4 class="modal-title" id="modal-basic-title">Fill fields you wish to modify</h4>
+   <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+     <span aria-hidden="true">×</span>
+   </button>
+  </div>
+  <div class="modal-body">
+   <div class="form-outline w-100">
+    <input type="text" class="form-control" id="title1" placeholder="title"><br>
+    <input type="number" class="form-control" id="percentage1" placeholder="80"><br>
+    <input type="date" class="form-control" id="datedeb1"><br>
+    <input type="date" class="form-control" id="datefin1"><br>
+    <label for="cars">Choose a cathegory:</label>
+    <select id="cathegory1" class="form-control">
+      <option value="Programmation">Programmation</option>
+      <option value="web_design">web_design</option>
+      <option value="manager">manager</option>
+    </select>
+   </div>
+  </div>
+  <div class="modal-footer">
+   <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')" (click)="modifycomp()">Modify</button>
+  </div>
+  </ng-template>
